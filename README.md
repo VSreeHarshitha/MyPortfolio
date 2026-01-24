@@ -36,4 +36,4 @@ My personal portfolio website built with **React.js**. It showcases my projects,
 📬 Connect with Me
 LinkedIn: Harshitha Vakkantham
 
-Portfolio: [Live Site Link Here]
+Portfolio: [[Live Site Link Here](https://my-portfolio-knkw2un96.vercel.app/)]

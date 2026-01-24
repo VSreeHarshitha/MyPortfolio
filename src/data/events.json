@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Google Cloud GenAI Certification",
+    "date": "Jan 2026",
+    "description": "Completed the Google Cloud GenAI Certification.",
+    "tag": "Certification",
+    "color": "#00ff00"
+  },
+  {
+    "title": "Microsoft Learn Student Ambassador (Alpha)",
+    "date": "Current Milestone",
+    "description": "Rejection didn’t stop me. It trained me. After applying 5–6 times, I finally earned the Alpha Milestone.",
+    "tag": "Milestone",
+    "color": "#38bdf8"
+  },
+  {
+    "title": "3rd Prize - Hack-A-Thon 1.0",
+    "date": "St. Peter's Engineering College",
+    "description": "Secured 3rd Prize! Built a solution through late-night coding and resilience.",
+    "tag": "Hackathon Winner",
+    "color": "#FFD700"
+  },
+  {
+    "title": "2nd Prize - IARE Hackathon (GeoSick)",
+    "date": "Institute of Aeronautical Engineering",
+    "description": "Competed against 50+ teams to win 2nd Prize with our project 'GeoSick'.",
+    "tag": "Hackathon Winner",
+    "color": "#C0C0C0"
+  }
+]
