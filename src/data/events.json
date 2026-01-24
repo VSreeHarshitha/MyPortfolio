@@ -1,5 +1,12 @@
 [
   {
+    "title": "Azure Cloud Security Workshop",
+    "date": "Jan 2026",
+    "description": "Attended a Workshop on Azure Cloud Security.",
+    "tag": "Workshop",
+    "color": "#800080"
+  },
+  {
     "title": "Google Cloud GenAI Certification",
     "date": "Jan 2026",
     "description": "Completed the Google Cloud GenAI Certification.",
