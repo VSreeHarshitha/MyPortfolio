@@ -1,0 +1,345 @@
+/* =========================================
+   1. GLOBAL THEME VARIABLES
+   ========================================= */
+:root {
+  --primary-color: #38bdf8;       /* Cyan Glow (Matches React/Azure) */
+  --secondary-color: #a855f7;     /* Purple Accent */
+  --bg-color: #0f1729;            /* Deep Navy Background */
+  --card-bg: rgba(30, 41, 59, 0.7); /* See-through Glass */
+  --text-color: #e2e8f0;          /* Soft White Text */
+}
+
+/* =========================================
+   2. BASIC SETUP
+   ========================================= */
+html {
+  --section-background-color: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 29, 0.6),
+    rgba(12, 25, 44, 1)
+  );
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color) !important;
+  font-weight: 700;
+}
+
+/* =========================================
+   3. TEXT HIGHLIGHTS
+   ========================================= */
+.cyan {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(56, 189, 248, 0.6); /* Text Glow */
+}
+
+.purple {
+  color: var(--secondary-color) !important;
+  font-weight: bold;
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.1s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+/* =========================================
+   4. NAVBAR STYLES
+   ========================================= */
+.navbar {
+  transition: all 0.3s ease-out;
+  padding: 1rem 2rem !important;
+  background-color: transparent !important;
+}
+
+.sticky {
+  background-color: rgba(15, 23, 41, 0.95) !important;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
+  backdrop-filter: blur(15px);
+  padding: 0.5rem 2rem !important;
+}
+
+.navbar-toggler {
+  position: relative;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-toggler span {
+  display: block;
+  background-color: var(--primary-color);
+  height: 4px;
+  width: 27px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transform: rotate(0deg);
+  position: relative;
+  left: 0;
+  opacity: 1;
+  border-radius: 2px;
+}
+
+/* =========================================
+   5. COMPONENT STYLES (Cards & Glass)
+   ========================================= */
+.glass-card {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  transition: transform 0.4s;
+  height: 100%;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 40px rgba(56, 189, 248, 0.2);
+}
+
+.tech-icons {
+  font-size: 4.5em;
+  margin: 15px;
+  padding: 10px;
+  opacity: 0.9;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+}
+
+.tech-icons:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+.tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-card h5 {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: #cbd5e1;
+}
+
+/* =========================================
+   6. IMAGE STYLES (The Photo Glow)
+   ========================================= */
+.home-pic {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  /* A subtle, professional blob shape */
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.3); /* Softer glow */
+  transition: all 0.5s ease-in-out;
+  
+  /* Very slow, professional breathing animation */
+  animation: blob-breathe 8s infinite ease-in-out; 
+}
+
+@keyframes blob-breathe {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.home-pic:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px var(--primary-color);
+}
+
+.home-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px var(--primary-color);
+}
+
+
+
+/* Mobile Responsiveness for Image */
+@media (max-width: 767px) {
+  .home-pic {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+  }
+  
+  .home-header {
+    text-align: center;
+  }
+  
+  .heading-name {
+    font-size: 2.5em !important;
+  }
+}
+
+/* Add this to the very bottom of App.css */
+
+.navbar-nav .nav-link {
+  color: #ffffff !important; /* Forces text to be white */
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important; /* Turns Blue when you hover */
+}
+
+.navbar-toggler span {
+  background-color: #ffffff !important; /* Makes the mobile menu icon white */
+}
+
+/* =========================================
+   EVENTS TIMELINE STYLES
+   ========================================= */
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* The Vertical Line */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: rgba(56, 189, 248, 0.3); /* Cyan line */
+  top: 0;
+  bottom: 0;
+  left: 20px; /* Adjust for mobile layout primarily */
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 60px; /* Space for the icon */
+}
+
+/* The Icon Circle */
+.timeline-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  border: 2px solid #0f1729;
+}
+
+/* The Tag Badge (e.g., "Winner") */
+.badge-custom {
+  border: 1px solid;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.timeline-content {
+  border-left: 4px solid transparent; /* Accent border on hover */
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
+  border-left: 4px solid var(--primary-color);
+}
+
+/* =========================================
+   NEW HOME PAGE STYLES
+   ========================================= */
+
+/* 1. Gradient Text Effect for your Name */
+.main-name {
+  background: linear-gradient(to right, #38bdf8 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* 2. The New "Introduction" Section */
+.home-about-section {
+  position: relative;
+  padding-bottom: 70px !important;
+  padding-top: 70px !important;
+  background-color: rgba(10, 15, 28, 0.4); /* Slightly darker background */
+}
+
+.home-about-description {
+  color: white !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: left;
+}
+
+.home-about-body {
+  padding-top: 50px;
+  font-size: 1.2em !important;
+  text-align: left;
+}
+
+/* 3. Social Icons on Home Page */
+.home-social-icons {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transition: 0.5s;
+  margin-right: 15px;
+}
+
+.home-social-icons:hover {
+  background: var(--primary-color);
+  transform: scale(1.2);
+  color: white !important;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.social-icons-footer {
+    margin-top: 20px;
+}
